@@ -1,0 +1,28 @@
+part1
+
+4.13 上午
+boxBlur()
+numIterations每一此都需要一个新的PixImage，否则n次的结果也等于1次
+需要建立一个数组引用 引用的对象必须初始化，并且第一个要设为原PixImage，这样一共有n+1个引用，注意这一点
+
+toString()输出的顺序，外循环应该是Height，内循环是Width，不然看起来像做了转置一样，还以为是boxBlur出错，在boxBlur里面改等于南辕北辙\
+
+Sobel()
+问题出在indiceY越界，函数中把indiceY = j - (currentHei-1)写成了indiceY = j - (currentWid-1)造成
+
+Blur()
+需要两个jai，在文件夹里面，通过package里面的buildpath创建路径，这样消除了一直显示的error。
+然后注释了函数中大多数print。
+在Blur主函数里面，本来使用的是args给启动Blur的blurFile方法传递参数，这里args不太会用我直接将其改为了文件名，这里有个小细节文件名一定要有.tiff的后缀。
+
+Sobel()
+与Blur相同
+
+SetPixel()
+首先分为(x,y)在DListNode里靠前中间靠后三种情况，另外这里忽略了一点一定要考虑DListNode里面频率为1的情况（当在DListNode靠前或靠后时），
+当1减为0时，这种情况需要将原节点删除（其实更简单是方法是修改原节点）
+如果使用了RunIterator，在第一个节点删除的时候需要把RunIterator切换
+用toString()来debug很方便
+最后一个bug insert方法引用少指了一个出了问题
+
+4.19下午完成

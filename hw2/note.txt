@@ -1,0 +1,2 @@
+difference
+先写了一个方法dayInAll比较当前日期和1/1/1所差天数，在difference方法里就可以直接用相减算出日期所差天数了。

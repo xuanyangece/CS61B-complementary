@@ -1,0 +1,8 @@
+smoosh()
+通过for循环 注意当连续的重复int减为1个的时候再继续，因此不在for()内++
+
+squish()
+通过nth比较，但是nth返回item无法获得下一个SListNode的引用，因此copy了nthObj大部分代码，最后return换成了引用创建了nthObj函数
+
+twin()
+最后一个之前采用插入新SListNode的方式，最后一个直接insertEnd
